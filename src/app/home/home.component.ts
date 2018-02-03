@@ -9,6 +9,5 @@ import { AppComponent } from '../app.component';
 export class HomeComponent implements OnInit {
   constructor(private app: AppComponent) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
