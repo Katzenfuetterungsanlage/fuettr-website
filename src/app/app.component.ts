@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     private titleService: Title,
   ) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .map(() => this.activatedRoute)
@@ -34,8 +34,12 @@ export class AppComponent implements OnInit {
       .subscribe(event => this.titleService.setTitle(event['title']));
   }
 
-  toggleState() {
+  private toggleState() {
     const bool = this.navShow;
     this.navShow = bool === false ? true : false;
+  }
+
+  public navOff() {
+    this.navShow = false;
   }
 }

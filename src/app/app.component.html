@@ -3,20 +3,20 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand logo" (click)="toggleState()" routerLink="/home">
+    <a class="navbar-brand logo" routerLink="/home">
         <img alt="Brand" class="logo-picture" src="favicon.ico" width="48"> Füttr</a>
 
 
     <div class="collapse navbar-collapse" [ngClass]="{'show': navShow}" id="Navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" (click)="toggleState()" routerLink="/home">Home</a>
+                <a class="nav-link" routerLink="/home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="toggleState()" routerLink="/what">Was ist Füttr?</a>
+                <a class="nav-link" routerLink="/what">Was ist Füttr?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="toggleState()" routerLink="/contact">Kontakt</a>
+                <a class="nav-link" routerLink="/contact">Kontakt</a>
             </li>
             <!-- <li ngbDropdown class="nav-item dropdown" style="cursor: pointer">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle aria-haspopup="true" aria-expanded="false">

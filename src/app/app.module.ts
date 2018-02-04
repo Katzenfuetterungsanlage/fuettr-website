@@ -11,11 +11,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WhatComponent } from './what/what.component';
 import { ContactComponent } from './contact/contact.component';
+import { HttpService } from './http.service';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, WhatComponent, ContactComponent],
   imports: [NgbModule.forRoot(), BrowserModule, HttpClientModule, AppRoutingModule, HttpModule, FormsModule, BrowserAnimationsModule],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
