@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as https from 'https';
+import * as http from 'http';
 import * as child from 'child_process';
 import * as fs from 'fs';
 import * as express from 'express';
@@ -21,6 +22,9 @@ app.post('/', (req, res) => {
 });
 
 const port = 2526;
-const server = https.createServer({ key: privKey, cert: cert }, app).listen(port, () => {
+const httpserver = http.createServer(app).listen(port, () => {
   console.log('Server running on port ' + port);
 });
+// const httpsserver = https.createServer({ key: privKey, cert: cert }, app).listen(port, () => {
+//   console.log('Server running on port ' + port);
+// });
