@@ -311,7 +311,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.app.navOff();
-        this.http.get('https://sorogon.duckdns.org:2526').then(function (res) {
+        this.http.get('http://sorogon.duckdns.org:2526').then(function (res) {
             _this.test = res;
         });
     };

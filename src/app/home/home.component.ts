@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.app.navOff();
-    this.http.get('https://sorogon.duckdns.org:2526').then(res => {
+    this.http.get('http://sorogon.duckdns.org:2526').then(res => {
       this.test = res;
     });
   }
