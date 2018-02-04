@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
 });
 app.post('/', (req, res) => {
   fs.appendFileSync(path.join(__dirname, '../updates.json'), req.body);
+  res.sendStatus(200);
 });
 
 const port = 2526;
