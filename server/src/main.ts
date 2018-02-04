@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../updates.json'));
 });
 app.post('/', (req, res) => {
-  fs.appendFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(JSON.parse(req.body)));
+  fs.appendFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(req.body));
   res.sendStatus(200);
 });
 
