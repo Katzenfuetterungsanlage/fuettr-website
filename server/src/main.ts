@@ -17,9 +17,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../updates.json'));
 });
 app.post('/', (req, res) => {
-  fs.appendFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(req.body));
+  let updates = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
+  updates.push(JSON.parse(req.body));
+  fs.writeFileSync(path.join(__dirname, '../updates.json'), updates);
   res.sendStatus(200);
 });
+app.use('/gui', express.static(path.join(__dirname, '../ng2/dist')));
 
 const port = 2526;
 const httpserver = http.createServer(app).listen(port, () => {
