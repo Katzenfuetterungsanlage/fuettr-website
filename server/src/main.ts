@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyparser.json());
 app.use(morgan('tiny'));
 
-app.get('/', (req, res) => {
+app.get('/data', (req, res) => {
   res.sendFile(path.join(__dirname, '../updates.json'));
 });
 app.post('/', (req, res) => {
@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
   fs.writeFileSync(path.join(__dirname, '../updates.json'), updates);
   res.sendStatus(200);
 });
-app.use('/gui', express.static(path.join(__dirname, '../ng2/dist')));
+app.use(express.static(path.join(__dirname, '../ng2/dist')));
 
 const port = 2526;
 const httpserver = http.createServer(app).listen(port, () => {
