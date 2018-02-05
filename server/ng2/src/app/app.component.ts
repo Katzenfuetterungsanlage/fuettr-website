@@ -10,10 +10,10 @@ import * as itf from './interfaces';
 export class AppComponent implements OnInit {
   public Webhook: itf.Update[];
 
-  constructor(private httpService: HttpService) {}
+  constructor(private http: HttpService) {}
 
   public ngOnInit(): void {
-    this.httpService.get('/data').then(res => {
+    this.http.get('http://sorogon.duckdns.org:2526/data').then(res => {
       this.Webhook = res;
     });
   }
