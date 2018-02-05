@@ -16,10 +16,10 @@ app.use(morgan('tiny'));
 app.get('/data', (req, res) => {
   res.sendFile(path.join(__dirname, '../updates.json'));
 });
-app.post('/', (req, res) => {
-  let updates = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
-  updates.push(JSON.parse(req.body));
-  fs.writeFileSync(path.join(__dirname, '../updates.json'), updates);
+app.post('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+  let file = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
+  file.updates.push(JSON.parse(JSON.stringify(req.body)));
+  fs.writeFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(file));
   res.sendStatus(200);
 });
 app.use('/', express.static(path.join(__dirname, '../ng2/dist')));
