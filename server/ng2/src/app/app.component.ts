@@ -8,13 +8,15 @@ import * as itf from './interfaces';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public Webhook: itf.Update[];
+  public Webhooks: itf.Root;
+  public done = false;
 
   constructor(private http: HttpService) {}
 
   public ngOnInit(): void {
-    this.http.get('http://sorogon.duckdns.org:2526/data').then(res => {
-      this.Webhook = res;
+    this.http.get('/data').then(res => {
+      this.Webhooks = res;
+      this.done = true;
     });
   }
 }

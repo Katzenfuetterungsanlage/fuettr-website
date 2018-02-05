@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let update of Webhooks\">\r\n  {{update}}\r\n</div>\r\n"
+module.exports = "<div *ngIf=\"done\">\r\n  <div *ngFor=\"let update of Webhooks.updates\">\r\n    <div style=\"border-top: 1px solid\">\r\n      <h4>{{update.head_commit.timestamp}}</h4>\r\n      <h3><img [src]=\"update.sender.avatar_url\" width=\"30px\" style=\"border: 1px solid white\">{{update.pusher.name}}</h3>\r\n      <br>\r\n      <a [href]=\"update.head_commit.url\">{{update.head_commit.id}}</a>\r\n      <br> <code>{{update.head_commit.message}}</code>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -63,11 +63,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AppComponent = (function () {
     function AppComponent(http) {
         this.http = http;
+        this.done = false;
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get('http://sorogon.duckdns.org:2526/data').then(function (res) {
-            _this.Webhook = res;
+        this.http.get('/data').then(function (res) {
+            _this.Webhooks = res;
+            _this.done = true;
         });
     };
     AppComponent = __decorate([
