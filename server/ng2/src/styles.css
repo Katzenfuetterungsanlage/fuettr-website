@@ -13,6 +13,8 @@
 }
 
 .message {
+  border-radius: 5px;
+  background-color: #394755;
 }
 
 .url {
@@ -21,8 +23,6 @@
 .timestamp {
   font-size: 14pt;
   margin-left: 5px;
-  border-radius: 5px;
-  background-color: #394755;
 }
 
 .name {
