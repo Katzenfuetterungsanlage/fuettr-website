@@ -8,8 +8,23 @@
 
 .commit {
   border-bottom: 1px solid;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-bottom: 5px;
+}
+
+.message {
+}
+
+.url {
+}
+
+.timestamp {
+  font-size: 14pt;
+  margin-left: 5px;
+}
+
+.name {
+  font-size: 16pt;
 }
 
 body {
