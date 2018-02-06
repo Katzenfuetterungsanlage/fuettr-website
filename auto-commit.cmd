@@ -4,5 +4,5 @@ git add -A
 git commit -m "auto-commit"
 git push
 goto start
-timeout /t 10 /nobreak > NUL
+@ping 127.0.0.1 -n 2 -w 10000 > nul
 pause
