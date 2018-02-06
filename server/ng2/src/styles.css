@@ -5,3 +5,7 @@
   border-radius: 2px;
   margin-top: 2px;
 }
+
+.link :any-link {
+  color: #4f2b50;
+}
