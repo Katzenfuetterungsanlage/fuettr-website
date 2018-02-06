@@ -191,6 +191,7 @@ export interface Update {
   pusher: Pusher;
   organization: Organization;
   sender: Sender;
+  timestamp: string;
 }
 
 export interface Root {
