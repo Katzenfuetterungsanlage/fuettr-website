@@ -1,16 +1,14 @@
 <div *ngIf="done">
   <div *ngFor="let update of Webhooks.updates">
-    <c style="border-bottom: 1px solid">
+    <div style="border-bottom: 1px solid">
       <span style="font-size: 14pt">{{update.head_commit.timestamp}}</span>
       <br>
       <b style="font-size: 16pt">
         <img [src]="update.sender.avatar_url" width="20px" class="avatar"> {{update.pusher.name}}</b>
       <br>
-      <code>
-        <a [href]="update.head_commit.url" target="_blank" class="link">{{update.head_commit.id}}</a>
-      </code>
+      <a [href]="update.head_commit.url" target="_blank" class="link">{{update.head_commit.id}}</a>
       <br>
       <code>{{update.head_commit.message}}</code>
+    </div>
   </div>
-</div>
 </div>
