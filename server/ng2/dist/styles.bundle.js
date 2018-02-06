@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Inconsolata|Varela+Round);", ""]);
 
 // module
-exports.push([module.i, ".avatar {\r\n  border: 1px solid white;\r\n  border-radius: 2px;\r\n  margin-top: 6px;\r\n}\r\n\r\n.commit {\r\n  border-bottom: 1px solid;\r\n  margin-bottom: 10px;\r\n  padding-bottom: 5px;\r\n}\r\n\r\n.message {\r\n  font-size: 12pt;\r\n  border-radius: 5px;\r\n  background-color: #BDC2C8;\r\n  padding: 5px;\r\n  margin: 5px;\r\n}\r\n\r\n.url {\r\n  font-family: 'Inconsolata', monospace;\r\n  margin: 2px;\r\n  font-size: 10pt;\r\n}\r\n\r\n.timestamp {\r\n  font-size: 12pt;\r\n  margin-left: 5px;\r\n}\r\n\r\n.name {\r\n  font-size: 16pt;\r\n}\r\n\r\nbody {\r\n  font-family: 'Varela Round', sans-serif;\r\n  background: #4e5d6c;\r\n}\r\n", ""]);
+exports.push([module.i, ".avatar {\r\n  border: 1px solid white;\r\n  border-radius: 2px;\r\n  margin-top: 6px;\r\n}\r\n\r\n.commit {\r\n  border-bottom: 1px solid;\r\n  margin-bottom: 10px;\r\n  padding-bottom: 5px;\r\n}\r\n\r\n.message {\r\n  font-size: 12pt;\r\n  border-radius: 5px;\r\n  background-color: #BDC2C8;\r\n  padding: 5px;\r\n  margin: 5px;\r\n}\r\n\r\n.url {\r\n  font-family: 'Inconsolata', monospace;\r\n  margin: 2px;\r\n  font-size: 10pt;\r\n}\r\n\r\n.timestamp {\r\n  font-size: 12pt;\r\n  margin-left: 5px;\r\n}\r\n\r\n.name {\r\n  font-size: 14pt;\r\n}\r\n\r\nbody {\r\n  font-family: 'Varela Round', sans-serif;\r\n  background: #4e5d6c;\r\n}\r\n", ""]);
 
 // exports
 
