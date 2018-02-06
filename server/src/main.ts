@@ -20,11 +20,13 @@ app.get('/data', (req, res) => {
 });
 app.post('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
   let file: itf.Root = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
-  let new = JSON.parse(JSON.stringify(req.body));
-  for (let i=0, i<file.updates.length, i++) {
-
+  const newv = JSON.parse(JSON.stringify(req.body));
+  let result: itf.Update[];
+  result.push(newv);
+  for (let i = 0; i < file.updates.length; i++) {
+    result.push(file.updates[i]);
   }
-  fs.writeFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(file));
+  fs.writeFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(result));
   res.sendStatus(200);
 });
 app.use('/', express.static(path.join(__dirname, '../ng2/dist')));
