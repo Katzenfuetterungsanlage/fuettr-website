@@ -29,11 +29,13 @@
 }
 
 .time {
+  font-family: 'Inconsolata', monospace;
   font-size: 12pt;
   margin-left: 5px;
 }
 
 .date {
+  font-family: 'Inconsolata', monospace;
   font-size: 12pt;
 }
 
