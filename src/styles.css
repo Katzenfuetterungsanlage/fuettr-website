@@ -1,9 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'bootstrap.css';
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Allerta');
 
 html {
   height: 100% !important;
@@ -15,26 +12,6 @@ body {
 
 .height-100-percent {
   height: 100% !important;
-}
-
-
-.color-1 {
-  color: #daf7a6;
-}
-.color-2 {
-  color: #ffc300;
-}
-.color-3 {
-  color: #ff5733;
-}
-.color-4 {
-  color: #c70039;
-}
-.color-5 {
-  color: #900c3f;
-}
-.color-6 {
-  color: #581845;
 }
 
 .navbar {
@@ -82,10 +59,6 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-.btn {
-  font-family: 'Ubuntu', sans-serif;
-}
-
 .logo {
   font-family: 'Concert One', cursive;
   font-size: 32px;
@@ -100,60 +73,23 @@ body {
   margin-right: -8px;
 }
 
-.input-group-addon {
-  font-size: 12pt !important;
-  padding: 0.1rem 0.5rem !important;
-}
-
-.bigger {
-  font-size: 120% !important;
-}
-
-.savedAnimate {
-  margin-left: -126px;
-}
-
-.failedAnimate {
-  margin-left: -113px;
-}
-
-.input-error {
-  border: 2px solid #c9302c;
-}
-
 @media only screen and (max-width: 576px) {
   body {
     font-size: 0.5rem !important;
-  }
-  .bigger-h1 {
-    font-size: 1.4rem !important;
-    border-bottom: 2px solid white;
   }
 }
 @media only screen and (max-width: 768px) {
   body {
     font-size: 0.7rem !important;
   }
-  .bigger-h1 {
-    font-size: 1.6rem !important;
-    border-bottom: 2px solid white;
-  }
 }
 @media only screen and (max-width: 992px) {
   body {
     font-size: 0.9rem !important;
   }
-  .bigger-h1 {
-    font-size: 1.8rem !important;
-    border-bottom: 2px solid white;
-  }
 }
 @media only screen and (max-width: 1200px) {
   body {
     font-size: 1.1rem !important;
-  }
-  .bigger-h1 {
-    font-size: 2rem !important;
-    border-bottom: 2px solid white;
   }
 }
