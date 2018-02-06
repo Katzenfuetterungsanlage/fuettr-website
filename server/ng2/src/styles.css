@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Varela+Round');
 
+/* font-family: 'Varela Round', sans-serif;
+   font-family: 'Inconsolata', monospace; */
+
 .avatar {
   border: 1px solid white;
   border-radius: 2px;
