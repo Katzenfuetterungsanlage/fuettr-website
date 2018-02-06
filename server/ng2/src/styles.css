@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Varela+Round');
 
-/* font-family: 'Varela Round', sans-serif;
+/* ;
    font-family: 'Inconsolata', monospace; */
 
 .avatar {
@@ -37,5 +37,6 @@
 }
 
 body {
+  font-family: 'Varela Round', sans-serif;
   background: #4e5d6c;
 }
