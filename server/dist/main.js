@@ -15,8 +15,11 @@ app.get('/data', function (req, res) {
     res.sendFile(path.join(__dirname, '../updates.json'));
 });
 app.post('/', function (req, res, next) {
+    var date = new Date();
     var file = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
     var newv = JSON.parse(JSON.stringify(req.body));
+    newv.time = date.toLocaleTimeString();
+    newv.date = date.toDateString();
     var result;
     result.push(newv);
     for (var i = 0; i < file.updates.length; i++) {
