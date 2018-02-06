@@ -6,11 +6,11 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta');
 
 html {
-  height: 88% !important;
+  height: 100% !important;
 }
 
 body {
-  height: 100% !important;
+  height: 88% !important;
 }
 
 .height-100-percent {
