@@ -27,7 +27,7 @@ app.post('/', (req: express.Request, res: express.Response, next: express.NextFu
   let result: itf.Root;
   result.updates[0] = newv;
   for (let i = 0; i < file.updates.length; i++) {
-    result.push(file.updates[i]);
+    result.updates.push(file.updates[i]);
   }
   fs.writeFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(result));
   res.sendStatus(200);
