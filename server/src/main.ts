@@ -24,7 +24,7 @@ app.post('/', (req: express.Request, res: express.Response, next: express.NextFu
   let newv: itf.Update = JSON.parse(JSON.stringify(req.body));
   newv.time = date.toLocaleTimeString();
   newv.date = date.toDateString();
-  let result: itf.Root;
+  let result: itf.Root = { updates: [] };
   result.updates[0] = newv;
   for (let i = 0; i < file.updates.length; i++) {
     result.updates.push(file.updates[i]);
