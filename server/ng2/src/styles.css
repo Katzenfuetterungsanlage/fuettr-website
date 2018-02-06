@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Varela+Round');
 
 .avatar {
   border: 1px solid white;
@@ -14,7 +14,7 @@
 
 .message {
   border-radius: 5px;
-  background-color: #564E6C;
+  background-color: #564e6c;
   padding: 5px;
   margin: 5px;
 }
