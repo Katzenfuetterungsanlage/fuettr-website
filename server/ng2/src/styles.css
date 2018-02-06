@@ -26,13 +26,13 @@
   font-family: 'Inconsolata', monospace;
   margin: 2px;
   font-size: 10pt;
+}
+
+.url :link {
   color: #08085c;
 }
 
 .url :visited {
-  font-family: 'Inconsolata', monospace;
-  margin: 2px;
-  font-size: 10pt;
   color: #3e0350;
 }
 
