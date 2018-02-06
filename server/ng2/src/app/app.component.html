@@ -3,8 +3,8 @@
     <div style="border-bottom: 1px solid">
       <span style="font-size: 14pt">{{update.head_commit.timestamp}}</span>
       <br>
-      <span style="font-size: 16pt">
-        <img [src]="update.sender.avatar_url" width="30px" style="border: 1px solid white"> {{update.pusher.name}}</span>
+      <b style="font-size: 16pt">
+        <img [src]="update.sender.avatar_url" width="30px" style="border: 1px solid white"> {{update.pusher.name}}</b>
       <br>
       <a [href]="update.head_commit.url" target="_blank">{{update.head_commit.id}}</a>
       <br>
