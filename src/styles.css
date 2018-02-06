@@ -5,6 +5,18 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Allerta');
 
+html {
+  height: 100% !important;
+}
+
+body {
+  height: 100% !important;
+}
+
+.height-100-percent {
+  height: 100% !important;
+}
+
 .color-1 {
   color: #daf7a6;
 }
