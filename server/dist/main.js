@@ -21,9 +21,9 @@ app.post('/', function (req, res, next) {
     newv.time = date.toLocaleTimeString();
     newv.date = date.toDateString();
     var result;
-    result.push(newv);
+    result.updates[0] = newv;
     for (var i = 0; i < file.updates.length; i++) {
-        result.push(file.updates[i]);
+        result.updates.push(file.updates[i]);
     }
     fs.writeFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(result));
     res.sendStatus(200);
