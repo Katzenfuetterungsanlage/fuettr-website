@@ -23,7 +23,7 @@ app.post('/', (req: express.Request, res: express.Response, next: express.NextFu
   let file: itf.Root = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
   let newv: itf.Update = JSON.parse(JSON.stringify(req.body));
   newv.time = date.toLocaleTimeString();
-  newv.date = date.toLocaleDateString();
+  newv.date = date.toDateString();
   let result: itf.Update[];
   result.push(newv);
   for (let i = 0; i < file.updates.length; i++) {
