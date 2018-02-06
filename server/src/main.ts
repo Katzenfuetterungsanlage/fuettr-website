@@ -19,9 +19,11 @@ app.get('/data', (req, res) => {
   res.sendFile(path.join(__dirname, '../updates.json'));
 });
 app.post('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
+  const date = new Date();
   let file: itf.Root = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
   let newv: itf.Update = JSON.parse(JSON.stringify(req.body));
-  newv.timestamp = Date.now;
+  newv.time = date.toLocaleTimeString();
+  newv.date = date.toLocaleDateString();
   let result: itf.Update[];
   result.push(newv);
   for (let i = 0; i < file.updates.length; i++) {
