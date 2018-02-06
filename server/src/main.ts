@@ -20,7 +20,7 @@ app.get('/data', (req, res) => {
 });
 app.post('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
   const date = new Date();
-  let file: itf.Root = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
+  const file: itf.Root = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
   let newv: itf.Update = JSON.parse(JSON.stringify(req.body));
   newv.time = date.toLocaleTimeString();
   newv.date = date.toDateString();
