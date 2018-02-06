@@ -15,6 +15,8 @@
 .message {
   font-size: 12pt;
   border-radius: 5px;
+  border-left: #20b31b solid 5px !important;
+  border: #000000 solid 1px;
   background-color: #bdc2c8;
   padding: 5px;
   margin: 5px;
