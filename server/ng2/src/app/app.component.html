@@ -2,7 +2,7 @@
   <div *ngFor="let update of Webhooks.updates">
     <div class="commit">
       <span style="font-size: 14pt">
-        <pre>   </pre>{{update.head_commit.timestamp}}</span>
+        <pre>    </pre>{{update.head_commit.timestamp}}</span>
       <br>
       <b style="font-size: 16pt">
         <img [src]="update.sender.avatar_url" width="20px" class="avatar"> {{update.pusher.name}}</b>
