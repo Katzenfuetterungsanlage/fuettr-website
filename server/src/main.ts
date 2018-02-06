@@ -19,7 +19,7 @@ app.get('/data', (req, res) => {
   res.sendFile(path.join(__dirname, '../updates.json'));
 });
 app.post('/', (req: express.Request, res: express.Response, next: express.NextFunction) => {
-  let file = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
+  let file: itf.Update[] = JSON.parse(fs.readFileSync(path.join(__dirname, '../updates.json')).toString());
   let new = JSON.parse(JSON.stringify(req.body));
   for (i=0; i<file.updates.le)
   fs.writeFileSync(path.join(__dirname, '../updates.json'), JSON.stringify(file));
