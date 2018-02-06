@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\n.avatar {\r\n  border: 1px solid white;\r\n  border-radius: 2px;\r\n  margin-top: 2px;\r\n}\r\n\r\n.link {\r\n  color: #3e502b;\r\n}\r\n\r\n.commit {\r\n  border-bottom: 1px solid;\r\n  margin-bottom: 10px;\r\n}\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\n.avatar {\r\n  border: 1px solid white;\r\n  border-radius: 2px;\r\n  margin-top: 2px;\r\n}\r\n\r\n.commit {\r\n  border-bottom: 1px solid;\r\n  margin-bottom: 15px;\r\n  padding-bottom: 5px;\r\n}\r\n\r\nbody {\r\n  background: #ffffff;\r\n}\r\n", ""]);
 
 // exports
 
