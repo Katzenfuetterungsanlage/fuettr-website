@@ -20,7 +20,7 @@ app.post('/', function (req, res, next) {
     var newv = JSON.parse(JSON.stringify(req.body));
     newv.time = date.toLocaleTimeString();
     newv.date = date.toDateString();
-    var result;
+    var result = { updates: [] };
     result.updates[0] = newv;
     for (var i = 0; i < file.updates.length; i++) {
         result.updates.push(file.updates[i]);
