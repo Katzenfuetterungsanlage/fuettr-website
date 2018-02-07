@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
       .subscribe(event => this.titleService.setTitle(event['title']));
   }
 
-  private toggleState() {
+  public toggleState() {
     const bool = this.navShow;
     this.navShow = bool === false ? true : false;
   }
