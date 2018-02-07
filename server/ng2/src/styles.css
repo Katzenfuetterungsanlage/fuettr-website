@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Varela+Round');
 
+.dark-blue {
+  color: #2b3e50;
+}
+
+.light-blue {
+  color: #4e5d6c;
+}
+
+.light-light-blue {
+  color: #afb7bd;
+}
+
+.yellow {
+  color: #f7d816;
+}
+
 .avatar {
   border: 1px solid white;
   border-radius: 7px;
@@ -7,7 +23,7 @@
 }
 
 .commit {
-  border-bottom: #2B3E50 1px solid;
+  border-bottom: #2b3e50 1px solid;
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
@@ -15,9 +31,9 @@
 .message {
   font-size: 12pt;
   border-radius: 5px;
-  border-left: #1c6d19 solid 5px !important;
-  border: #2B3E50 solid 1px;
-  background-color: #AFB7BD;
+  border-left: #f7d816 solid 5px !important;
+  border: #2b3e50 solid 1px;
+  background-color: #afb7bd;
   padding: 5px;
   margin: 5px;
 }
@@ -52,5 +68,5 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
-  background: #4E5D6C;
+  background: #4e5d6c;
 }
