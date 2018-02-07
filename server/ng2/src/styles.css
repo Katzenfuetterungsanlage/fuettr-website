@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Varela+Round');
 
-.dark-blue {
-  color: #2b3e50;
+.color-1 {
+  color: #0cc267;
 }
-
-.light-blue {
-  color: #4e5d6c;
+.color-2 {
+  color: #c20cc2;
 }
-
-.light-light-blue {
-  color: #afb7bd;
+.color-3 {
+  color: #0c5fc2;
 }
-
-.yellow {
-  color: #f7d816;
+.color-4 {
+  color: #12b50a;
+}
+.color-5 {
+  color: #ecd80f;
+}
+.color-6 {
+  color: #630bdb;
 }
 
 .avatar {
