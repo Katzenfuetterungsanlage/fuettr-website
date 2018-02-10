@@ -1,10 +1,8 @@
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
-
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { PageScrollConfig, PageScrollService, PageScrollInstance, PageScrollOptions } from 'ng2-page-scroll';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -12,26 +10,20 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   public navShow = false;
+  public active1 = false;
+  public active2 = false;
+  public active3 = false;
+  public active4 = false;
+  public active5 = false;
+  private int = 1;
+  @ViewChild('container') private container: ElementRef;
 
-  public constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private titleService: Title,
-  ) {}
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any, private titleService: Title) {}
 
   public ngOnInit() {
-    this.router.events
-      .filter(event => event instanceof NavigationEnd)
-      .map(() => this.activatedRoute)
-      .map(route => {
-        while (route.firstChild) {
-          route = route.firstChild;
-          return route;
-        }
-      })
-      .filter(route => route.outlet === 'primary')
-      .mergeMap(route => route.data)
-      .subscribe(event => this.titleService.setTitle(event['title']));
+    this.titleService.setTitle('Füttr - Homepage');
+    PageScrollConfig.defaultScrollOffset = -10;
+    PageScrollConfig.defaultDuration = 200;
   }
 
   public toggleState() {
@@ -41,5 +33,68 @@ export class AppComponent implements OnInit {
 
   public navOff() {
     this.navShow = false;
+  }
+
+  public setInt(page: number) {
+    this.int = page;
+    this.switcher();
+  }
+
+  @HostListener('mousewheel', ['$event'])
+  scroll(event: WheelEvent) {
+    if (event.deltaY < -90) {
+      if (this.int === 1) {
+        return;
+      }
+      this.int--;
+    }
+    if (event.deltaY > 90) {
+      if (this.int === 5) {
+        return;
+      }
+      this.int++;
+    }
+    this.switcher();
+  }
+
+  private switcher() {
+    this.active1 = false;
+    this.active2 = false;
+    this.active3 = false;
+    this.active4 = false;
+    this.active5 = false;
+    switch (this.int) {
+      case 1:
+        this.active1 = true;
+        this.goTo('#home');
+        this.titleService.setTitle('Füttr - Homepage');
+        break;
+      case 2:
+        this.active2 = true;
+        this.goTo('#what');
+        this.titleService.setTitle('Füttr - Schritte');
+        break;
+      case 3:
+        this.active3 = true;
+        this.goTo('#how');
+        this.titleService.setTitle('Füttr - Funktionsweise');
+        break;
+      case 4:
+        this.active4 = true;
+        this.goTo('#updates');
+        this.titleService.setTitle('Füttr - Updates');
+        break;
+      case 5:
+        this.active5 = true;
+        this.goTo('#contact');
+        this.titleService.setTitle('Füttr - Kontakt');
+        break;
+    }
+  }
+
+  public goTo(anchor: string): void {
+    const pageScrollOptions: PageScrollOptions = { document: this.document, scrollTarget: anchor, pageScrollInterruptible: false };
+    const pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance(pageScrollOptions);
+    this.pageScrollService.start(pageScrollInstance);
   }
 }

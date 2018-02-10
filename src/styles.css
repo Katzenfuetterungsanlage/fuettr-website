@@ -2,16 +2,20 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-html {
-  height: 100% !important;
-}
-
 body {
-  height: 88% !important;
+  height: 100% !important;
+  overflow: hidden;
 }
 
 .height-100-percent {
   height: 100% !important;
+  padding-top: 10px;
+  border: 1px solid black;
+}
+
+.einfuenftel {
+  padding-top: 75px;
+  height: 18.7% !important;
 }
 
 .navbar {
@@ -31,10 +35,17 @@ body {
 
 .navbar li a,
 .navbar .navbar-brand {
-  color: #c6bfb9 !important;
+  color: #c6bfb9;
 }
 
 .navbar-nav li a:hover,
+.navbar-nav li.active a {
+  cursor: pointer;
+  color: #c6bfb9 !important;
+  background-color: #62584c !important;
+  font-size: 18px;
+}
+
 .navbar-nav li.active a {
   color: #c6bfb9 !important;
   background-color: #62584c !important;
@@ -61,6 +72,7 @@ body {
 
 .logo {
   font-family: 'Concert One', cursive;
+  color: #ffffff;
   font-size: 32px;
   margin: 0px;
   border: 0px;
@@ -73,23 +85,53 @@ body {
   margin-right: -8px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   body {
     font-size: 0.5rem !important;
   }
+  html {
+    height: 500% !important;
+  }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   body {
     font-size: 0.7rem !important;
   }
+  html {
+    height: 500% !important;
+    border-left: white solid 20px;
+    border-right: white solid 20px;
+  }
+  .navbar {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
   body {
     font-size: 0.9rem !important;
   }
+  html {
+    height: 500% !important;
+    border-left: white solid 40px;
+    border-right: white solid 40px;
+  }
+  .navbar {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   body {
     font-size: 1.1rem !important;
+  }
+  html {
+    height: 500% !important;
+    border-left: white solid 80px;
+    border-right: white solid 80px;
+  }
+  .navbar {
+    margin-left: 80px;
+    margin-right: 80px;
   }
 }
