@@ -7,15 +7,48 @@ body {
   overflow: hidden;
 }
 
+html {
+  height: 510% !important;
+}
+
+.basicblaubg {
+  background-color: #2b3e50;
+}
+
+.basicblau {
+  color: #2b3e50;
+}
+
+.blaugrau {
+  background-color: #606e7c;
+}
+
 .height-100-percent {
   height: 100% !important;
+  width: 100% !important;
   padding-top: 10px;
   border: 1px solid black;
+  background-color: white;
 }
 
 .einfuenftel {
-  padding-top: 75px;
-  height: 18.7% !important;
+  padding-top: 80px;
+  height: 20% !important;
+}
+
+.active {
+  border-bottom: white solid 3px;
+}
+
+.arrow-top {
+  margin-top: 70px;
+  left: 48.5%;
+  cursor: pointer;
+}
+
+.arrow-bottom {
+  left: 48.5%;
+  cursor: pointer;
 }
 
 .navbar {
@@ -89,16 +122,12 @@ body {
   body {
     font-size: 0.5rem !important;
   }
-  html {
-    height: 500% !important;
-  }
 }
 @media only screen and (min-width: 768px) {
   body {
     font-size: 0.7rem !important;
   }
   html {
-    height: 500% !important;
     border-left: white solid 20px;
     border-right: white solid 20px;
   }
@@ -112,7 +141,6 @@ body {
     font-size: 0.9rem !important;
   }
   html {
-    height: 500% !important;
     border-left: white solid 40px;
     border-right: white solid 40px;
   }
@@ -125,8 +153,7 @@ body {
   body {
     font-size: 1.1rem !important;
   }
-  html {
-    height: 500% !important;
+  html { 
     border-left: white solid 80px;
     border-right: white solid 80px;
   }
