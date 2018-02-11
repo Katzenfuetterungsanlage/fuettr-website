@@ -32,7 +32,9 @@
 
 .whole {
   background: #606e7c;
-  margin: 50px;
+  margin-top: 100px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .message {
