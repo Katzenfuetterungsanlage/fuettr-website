@@ -6,6 +6,11 @@
   height: 100% !important;
 }
 
+.hw50 {
+  height: 50% !important;
+  width: 50% !important;
+}
+
 .einfuenftel {
   padding-top: 80px;
   height: 20% !important;
