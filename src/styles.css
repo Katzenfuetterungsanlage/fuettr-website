@@ -12,6 +12,10 @@
   border: 1px solid white;
 }
 
+.right {
+  margin-top: -47% !important;
+}
+
 .einfuenftel {
   padding-top: 80px;
   height: 20% !important;
