@@ -53,16 +53,9 @@
   font-size: 10pt;
 }
 
-.url :link {
-  color: #08085c;
-}
-
-.url :visited {
-  color: #3e0350;
-}
-
 .datetime {
   text-align: center;
+  color: black;
 }
 
 .time {
