@@ -37,7 +37,7 @@
 .contact:before {
   border-bottom: 50px solid #a32114;
   border-left: 12px solid transparent;
-  left: -40px;
+  left: -12px;
 }
 
 .contact:after {
