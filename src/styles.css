@@ -2,15 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-body {
-  height: 100% !important;
-  overflow: hidden;
-}
-
-html {
-  height: 510% !important;
-}
-
 .h100 {
   height: 100% !important;
 }
@@ -92,6 +83,15 @@ html {
 .logo-picture {
   margin-bottom: 6px;
   margin-right: -8px;
+}
+
+body {
+  height: 100% !important;
+  overflow: hidden;
+}
+
+html {
+  height: 510% !important;
 }
 
 @media only screen and (min-width: 576px) {
