@@ -41,10 +41,10 @@
 }
 
 .contact:after {
-  border-bottom: 50px solid #a32114;
-  border-right: 12px solid transparent;
+  border-bottom: 650px solid #a32114;
+  border-right: 200px solid transparent;
   left: 100px;
-  top: -50px;
+  top: -650px;
 }
 
 .einfuenftel {
