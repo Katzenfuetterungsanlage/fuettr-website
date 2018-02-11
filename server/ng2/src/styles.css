@@ -30,7 +30,6 @@
 
 .datetime {
   text-align: center;
-  color: black;
 }
 
 .time {
@@ -49,4 +48,8 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
+}
+
+a {
+  color: black;
 }
