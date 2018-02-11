@@ -9,6 +9,7 @@
 .hw50 {
   height: 47% !important;
   width: 50% !important;
+  border: 1px solid white;
 }
 
 .einfuenftel {
