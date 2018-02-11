@@ -75,12 +75,6 @@ html {
   font-size: 18px;
 }
 
-.navbar-nav li.active a {
-  color: #c6bfb9 !important;
-  background-color: #62584c !important;
-  font-size: 18px;
-}
-
 .navbar-default .navbar-toggle {
   border-color: transparent;
   color: #000000 !important;
