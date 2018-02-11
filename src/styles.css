@@ -25,6 +25,28 @@
   background-color: #191816;
 }
 
+.contact:after,
+.contact:before {
+  height: 0;
+  width: 0;
+  content: '';
+  display: block;
+  position: relative;
+}
+
+.contact:before {
+  border-bottom: 50px solid #a32114;
+  border-left: 12px solid transparent;
+  left: -12px;
+}
+
+.contact:after {
+  border-bottom: 50px solid #a32114;
+  border-right: 12px solid transparent;
+  left: 100px;
+  top: -50px;
+}
+
 .einfuenftel {
   padding-top: 80px;
   height: 20% !important;
