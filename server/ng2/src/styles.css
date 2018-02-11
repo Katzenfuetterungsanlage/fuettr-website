@@ -95,26 +95,6 @@
   font-size: 14pt;
 }
 
-.whole :after,
-.whole :before {
-  height: 0;
-  width: 0;
-  content: '';
-  display: block;
-  position: relative;
-}
-.whole :before {
-  border-bottom: 50px solid #a32114;
-  border-left: 12px solid transparent;
-  left: -12px;
-}
-.whole :after {
-  border-bottom: 50px solid #a32114;
-  border-right: 12px solid transparent;
-  left: 100px;
-  top: -50px;
-}
-
 body {
   font-family: 'Varela Round', sans-serif;
 }
