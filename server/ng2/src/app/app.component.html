@@ -5,8 +5,10 @@
     </div>
     <div class="commit">
       <div class="datetime">
-        <span class="date">{{update.date}} </span>at
-        <span class="time"> {{update.time}}</span>
+        <u>
+          <span class="date">{{update.date}} </span>at
+          <span class="time"> {{update.time}}</span>
+        </u>
       </div>
       <br>
       <div *ngFor="let commit of update.commits">
