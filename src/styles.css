@@ -67,13 +67,11 @@ html {
   color: #c6bfb9;
 }
 
-/* .navbar-nav li a:hover,
+.navbar-nav li a:hover,
 .navbar-nav li.active a {
   cursor: pointer;
-  color: #c6bfb9 !important;
-  background-color: #62584c !important;
-  font-size: 18px;
-} */
+  border-bottom: white solid 3px;
+}
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
