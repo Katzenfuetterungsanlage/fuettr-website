@@ -116,15 +116,7 @@ html {
   height: 510% !important;
 }
 
-@media only screen and (min-width: 576px) {
-  body {
-    font-size: 0.5rem !important;
-  }
-}
 @media only screen and (min-width: 768px) {
-  body {
-    font-size: 0.7rem !important;
-  }
   html {
     border-left: white solid 20px;
     border-right: white solid 20px;
@@ -134,10 +126,8 @@ html {
     margin-right: 20px;
   }
 }
+
 @media only screen and (min-width: 992px) {
-  body {
-    font-size: 0.9rem !important;
-  }
   html {
     border-left: white solid 40px;
     border-right: white solid 40px;
@@ -147,10 +137,8 @@ html {
     margin-right: 40px;
   }
 }
+
 @media only screen and (min-width: 1200px) {
-  body {
-    font-size: 1.1rem !important;
-  }
   html {
     border-left: white solid 80px;
     border-right: white solid 80px;
