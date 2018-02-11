@@ -30,9 +30,30 @@
   padding-bottom: 5px;
 }
 
-.whole {
+.whole{
   background: #606e7c;
-  margin: 50px;
+  position:relative;
+  margin:50px auto;
+  height:50px;
+  width:100px;
+}
+.whole:after,.whole:before {
+  height: 0;
+  width: 0;
+  content: "";
+  display: block;
+  position: relative;
+}
+.whole:before{
+  border-bottom: 50px solid #606e7c;
+  border-left: 12px solid transparent;
+  left: -12px;
+}
+.whole:after{
+  border-top: 50px solid #606e7c;
+  border-right: 12px solid transparent;
+  left: 100px;
+  top:-50px;
 }
 
 .message {
