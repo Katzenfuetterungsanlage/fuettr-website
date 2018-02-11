@@ -35,7 +35,7 @@
   font-size: 12pt;
   padding: 5px;
   margin: 5px;
-  align-content: center;
+  text-align: center;
 }
 
 .url {
@@ -53,7 +53,7 @@
 }
 
 .datetime {
-  align-content: center;
+  text-align: center;
 }
 
 .time {
