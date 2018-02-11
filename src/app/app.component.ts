@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef, NgZone } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { PageScrollConfig, PageScrollService, PageScrollInstance, PageScrollOptions } from 'ng2-page-scroll';
 import { DOCUMENT } from '@angular/common';
@@ -17,9 +17,28 @@ export class AppComponent implements OnInit {
   public tophidden = true;
   public bottomhidden = false;
   private int = 1;
+  public hideLogo = false;
   @ViewChild('container') private container: ElementRef;
 
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any, private titleService: Title) {}
+  constructor(
+    private pageScrollService: PageScrollService,
+    @Inject(DOCUMENT) private document: Document,
+    private titleService: Title,
+    ngZone: NgZone
+  ) {
+    if (window.innerWidth < 768) {
+      this.hideLogo = true;
+    }
+    window.onresize = e => {
+      ngZone.run(() => {
+        if (window.innerWidth < 768) {
+          this.hideLogo = true;
+        } else {
+          this.hideLogo = false;
+        }
+      });
+    };
+  }
 
   public ngOnInit() {
     this.goTo('#home');
@@ -39,6 +58,7 @@ export class AppComponent implements OnInit {
 
   public setInt(page: number) {
     this.int = page;
+    this.navShow = false;
     this.switcher();
   }
 
@@ -51,6 +71,23 @@ export class AppComponent implements OnInit {
       this.int--;
     }
     if (event.deltaY > 90) {
+      if (this.int === 5) {
+        return;
+      }
+      this.int++;
+    }
+    this.switcher();
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  keyup(event: KeyboardEvent) {
+    if (event.key === 'ArrowUp') {
+      if (this.int === 1) {
+        return;
+      }
+      this.int--;
+    }
+    if (event.key === 'ArrowDown') {
       if (this.int === 5) {
         return;
       }
