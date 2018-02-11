@@ -23,12 +23,8 @@ html {
   background-color: #606e7c;
 }
 
-.height-100-percent {
+.h100 {
   height: 100% !important;
-  width: 100% !important;
-  padding-top: 10px;
-  border: 1px solid black;
-  background-color: white;
 }
 
 .einfuenftel {
