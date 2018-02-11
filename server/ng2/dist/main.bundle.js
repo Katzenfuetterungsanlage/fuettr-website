@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"done\">\r\n  <div *ngFor=\"let update of Webhooks.updates\" class=\"whole\">\r\n    <div class=\"name\">\r\n      <img [src]=\"update.sender.avatar_url\" width=\"20px\" class=\"avatar\"> {{update.pusher.name}}\r\n    </div>\r\n    <div class=\"commit\">\r\n      <div class=\"datetime\">\r\n        <a [href]=\"update.head_commit.url\">\r\n          <span class=\"date\">{{update.date}} </span>at\r\n          <span class=\"time\"> {{update.time}}</span>\r\n        </a>\r\n      </div>\r\n      <br>\r\n      <div *ngFor=\"let commit of update.commits\">\r\n        <div class=\"message\">{{commit.message}}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div *ngIf=\"done\">\r\n  <div *ngFor=\"let update of Webhooks.updates\" class=\"whole\">\r\n    <div class=\"name\">\r\n      <img [src]=\"update.sender.avatar_url\" width=\"20px\" class=\"avatar\"> {{update.pusher.name}}\r\n    </div>\r\n    <div class=\"commit\">\r\n      <div class=\"datetime\">\r\n        <a [href]=\"update.head_commit.url\" target=\"_blank\">\r\n          <span class=\"date\">{{update.date}} </span>at\r\n          <span class=\"time\"> {{update.time}}</span>\r\n        </a>\r\n      </div>\r\n      <br>\r\n      <div *ngFor=\"let commit of update.commits\">\r\n        <div class=\"message\">{{commit.message}}</div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
