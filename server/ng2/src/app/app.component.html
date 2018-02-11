@@ -12,8 +12,6 @@
       </div>
       <br>
       <div *ngFor="let commit of update.commits">
-        <a [href]="commit.url" target="_blank" class="url">{{commit.id}}</a>
-        <br>
         <div class="message">{{commit.message}}</div>
       </div>
     </div>
