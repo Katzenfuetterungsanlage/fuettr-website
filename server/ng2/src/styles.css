@@ -28,6 +28,7 @@
 .commit {
   margin-bottom: 10px;
   padding-bottom: 5px;
+  background: #606e7c;
 }
 
 .message {
@@ -71,5 +72,4 @@
 
 body {
   font-family: 'Varela Round', sans-serif;
-  background: #606e7c;
 }
