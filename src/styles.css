@@ -26,7 +26,7 @@
 }
 .wrap {
   height: 500px;
-  width: 100%;
+  width: 60%;
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -36,7 +36,7 @@
   content: '';
   position: absolute;
   height: 130%;
-  width: 100%;
+  width: 60%;
   transform: skewY(-4deg);
   background: tomato;
   top: -50%;
