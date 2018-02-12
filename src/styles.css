@@ -25,6 +25,7 @@
   background-color: #191816;
   transform: skewX(-30deg);
   z-index: -2;
+  position: absolute;
 }
 
 .contact {
