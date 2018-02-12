@@ -18,7 +18,7 @@
 } */
 
 .contact-bg {
-  margin-top: 50px;
+  top: 10%;
   height: 70%;
   margin-left: 20%;
   margin-right: 20%;
@@ -28,7 +28,7 @@
 }
 
 .contact {
-  top: 50px;
+  top: 10%;
   height: 70%;
   margin-left: 20%;
   margin-right: 20%;
