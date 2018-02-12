@@ -20,6 +20,11 @@
   position: absolute;
 }
 
+.contact-margin {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 .einfuenftel {
   padding-top: 80px;
   height: 20% !important;
@@ -45,7 +50,7 @@
 }
 
 .head3 {
-  margin-top: 70px;
+  margin-top: 20%;
 }
 
 .navbar {
@@ -135,6 +140,13 @@ html {
   }
   .title {
     padding-top: 10px;
+  }
+  .contact-margin {
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
+  }
+  .head3 {
+    margin-top: 5% !important;
   }
 }
 
