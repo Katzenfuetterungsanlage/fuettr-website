@@ -36,7 +36,7 @@
   content: '';
   position: absolute;
   height: 130%;
-  width: 60%;
+  width: 100%;
   transform: skewY(-4deg);
   background: tomato;
   top: -50%;
