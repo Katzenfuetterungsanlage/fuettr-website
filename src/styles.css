@@ -24,7 +24,7 @@
   margin-right: 20%;
   background-color: #191816;
   transform: skewX(-30deg);
-  z-index: 8 initial;
+  z-index: 800 initial;
 }
 
 .contact {
@@ -32,7 +32,7 @@
   height: 70%;
   margin-left: 20%;
   margin-right: 20%;
-  z-index: 500 initial;
+  z-index: 8 initial;
 }
 
 .einfuenftel {
