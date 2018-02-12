@@ -137,6 +137,9 @@ html {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .contact-bg {
+    transform: skewX(-10deg);
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -147,6 +150,9 @@ html {
   .navbar {
     margin-left: 40px;
     margin-right: 40px;
+  }
+  .contact-bg {
+    transform: skewX(-20deg);
   }
 }
 
