@@ -43,11 +43,6 @@
   z-index: -2;
   left: 0;
 }
-.lower {
-  position: absolute;
-  bottom: 15%;
-  right: 0;
-}
 
 .einfuenftel {
   padding-top: 80px;
