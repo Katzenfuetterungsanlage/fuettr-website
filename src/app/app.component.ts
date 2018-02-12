@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
   public active5 = false;
   public tophidden = true;
   public bottomhidden = false;
+  public mobile = false;
   private int = 1;
-  public hideLogo = false;
   @ViewChild('container') private container: ElementRef;
 
   constructor(
@@ -27,14 +27,14 @@ export class AppComponent implements OnInit {
     ngZone: NgZone
   ) {
     if (window.innerWidth < 768) {
-      this.hideLogo = true;
+      this.mobile = true;
     }
     window.onresize = e => {
       ngZone.run(() => {
         if (window.innerWidth < 768) {
-          this.hideLogo = true;
+          this.mobile = true;
         } else {
-          this.hideLogo = false;
+          this.mobile = false;
         }
       });
     };
@@ -64,36 +64,40 @@ export class AppComponent implements OnInit {
 
   @HostListener('mousewheel', ['$event'])
   scroll(event: WheelEvent) {
-    if (event.deltaY < -90) {
-      if (this.int === 1) {
-        return;
+    if (!this.mobile) {
+      if (event.deltaY < -90) {
+        if (this.int === 1) {
+          return;
+        }
+        this.int--;
       }
-      this.int--;
-    }
-    if (event.deltaY > 90) {
-      if (this.int === 5) {
-        return;
+      if (event.deltaY > 90) {
+        if (this.int === 5) {
+          return;
+        }
+        this.int++;
       }
-      this.int++;
+      this.switcher();
     }
-    this.switcher();
   }
 
   @HostListener('window:keyup', ['$event'])
   keyup(event: KeyboardEvent) {
-    if (event.key === 'ArrowUp') {
-      if (this.int === 1) {
-        return;
+    if (!this.mobile) {
+      if (event.key === 'ArrowUp') {
+        if (this.int === 1) {
+          return;
+        }
+        this.int--;
       }
-      this.int--;
-    }
-    if (event.key === 'ArrowDown') {
-      if (this.int === 5) {
-        return;
+      if (event.key === 'ArrowDown') {
+        if (this.int === 5) {
+          return;
+        }
+        this.int++;
       }
-      this.int++;
+      this.switcher();
     }
-    this.switcher();
   }
 
   public up() {
