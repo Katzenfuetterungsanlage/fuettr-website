@@ -37,7 +37,7 @@
   position: absolute;
   height: 130%;
   width: 100%;
-  transform: skewY(-4deg);
+  transform: skewX(-4deg);
   background: tomato;
   top: -50%;
   z-index: -2;
