@@ -23,8 +23,9 @@
   margin-left: 20%;
   margin-right: 20%;
   background-color: #191816;
+  transform: skewX(-4deg);
 }
-.wrap {
+/* .wrap {
   height: 500px;
   width: 60%;
   display: inline-block;
@@ -37,12 +38,11 @@
   position: absolute;
   height: 130%;
   width: 100%;
-  transform: skewX(-4deg);
   background: tomato;
   top: -50%;
   z-index: -2;
   left: 0;
-}
+} */
 
 .einfuenftel {
   padding-top: 80px;
