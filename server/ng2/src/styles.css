@@ -15,8 +15,6 @@
 .whole {
   background: #606e7c;
   margin-top: 80px;
-  margin-left: 25%;
-  margin-right: 25%;
   border-left: 50px solid #606e7c;
   border-bottom: 50px solid #2b3e50;
 }
@@ -52,4 +50,32 @@ body {
 
 a {
   color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .whole {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .whole {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .whole {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .whole {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }

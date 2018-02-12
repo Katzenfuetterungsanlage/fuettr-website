@@ -20,8 +20,6 @@
 .contact-bg {
   margin-top: 50px;
   height: 70%;
-  margin-left: 20%;
-  margin-right: 20%;
   background-color: #191816;
   z-index: -2;
 }
@@ -132,6 +130,10 @@ html {
   html {
     font-size: 0.7rem;
   }
+  .contact-bg {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -145,6 +147,8 @@ html {
   }
   .contact-bg {
     transform: skewX(-10deg);
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -159,6 +163,8 @@ html {
   }
   .contact-bg {
     transform: skewX(-20deg);
+    margin-left: 15%;
+    margin-right: 15%;
   }
 }
 
@@ -173,5 +179,7 @@ html {
   }
   .contact-bg {
     transform: skewX(-30deg);
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }
