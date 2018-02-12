@@ -24,27 +24,29 @@
   margin-right: 20%;
   background-color: #191816;
 }
-
-.contact:after,
-.contact:before {
-  height: 0;
-  width: 0;
-  content: '';
-  display: block;
+.wrap {
+  height: 500px;
+  width: 100%;
+  display: inline-block;
   position: relative;
+  overflow: hidden;
+  z-index: 8;
 }
-
-.contact:before {
-  border-bottom: 650px solid #a32114;
-  border-left: 10% solid transparent;
-  left: -200px;
+.wrap:after {
+  content: '';
+  position: absolute;
+  height: 130%;
+  width: 100%;
+  transform: skewY(-4deg);
+  background: tomato;
+  top: -50%;
+  z-index: -2;
+  left: 0;
 }
-
-.contact:after {
-  border-top: 650px solid #a32114;
-  border-right: 200px solid transparent;
-  left: 1036px;
-  top: -650px;
+.lower {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
 }
 
 .einfuenftel {
