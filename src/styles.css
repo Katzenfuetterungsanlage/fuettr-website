@@ -23,7 +23,6 @@
   margin-left: 20%;
   margin-right: 20%;
   background-color: #191816;
-  transform: skewX(-30deg);
   z-index: -2;
 }
 
@@ -159,5 +158,8 @@ html {
   .navbar {
     margin-left: 80px;
     margin-right: 80px;
+  }
+  .contact-bg {
+    transform: skewX(-30deg);
   }
 }
