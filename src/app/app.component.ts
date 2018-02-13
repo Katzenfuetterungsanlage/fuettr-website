@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.goTo('#home');
+    // this.goTo('#home');
     this.titleService.setTitle('Füttr - Homepage');
     PageScrollConfig.defaultScrollOffset = -10;
     PageScrollConfig.defaultDuration = 200;

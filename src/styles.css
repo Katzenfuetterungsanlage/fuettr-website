@@ -6,21 +6,20 @@
   height: 100% !important;
 }
 
-.contact-bg {
+.skew-bg {
   margin-top: 50px;
   height: 70%;
   background-color: #191816;
   z-index: -2;
 }
 
-.contact {
-  top: 230px;
+.skew {
   height: 70%;
   z-index: 8;
-  position: absolute;
+  position: static;
 }
 
-.contact-margin {
+.contact {
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -28,6 +27,36 @@
 .einfuenftel {
   padding-top: 80px;
   height: 20% !important;
+}
+
+.middle-skew {
+  height: 100%;
+  width: 50%;
+  top: -200%;
+  left: 25%;
+  z-index: 8;
+  background-color: #54596f;
+  position: relative;
+}
+
+.right {
+  margin-left: 15px;
+  height: 100%;
+  width: 50%;
+  left: 50%;
+  top: -100%;
+  z-index: -2;
+  background-color: #22242c;
+  position: relative;
+}
+
+.left {
+  margin-left: -15px;
+  background-color: #868fb2;
+  width: 50%;
+  height: 100%;
+  z-index: -2;
+  position: relative;
 }
 
 .active {
@@ -125,14 +154,18 @@ html {
   html {
     font-size: 0.7rem;
   }
-  .contact-bg {
+  .skew-bg {
     transform: skewX(-2deg);
     margin-left: 5%;
     margin-right: 5%;
   }
-  .contact {
-    margin-left: 10%;
-    margin-right: 10%;
+  .skew {
+    transform: skewX(2deg);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .middle-skew {
+    transform: skewX(-2deg);
   }
   .arrow-top,
   .arrow-bottom {
@@ -141,7 +174,7 @@ html {
   .title {
     padding-top: 10px;
   }
-  .contact-margin {
+  .contact {
     margin-top: 2% !important;
     margin-bottom: 2% !important;
   }
@@ -159,14 +192,19 @@ html {
     margin-left: 20px;
     margin-right: 20px;
   }
-  .contact-bg {
+  .skew-bg {
     transform: skewX(-10deg);
     margin-left: 10%;
     margin-right: 10%;
   }
-  .contact {
-    margin-left: 20%;
-    margin-right: 20%;
+  .skew {
+    transform: skewX(10deg);
+    left: -20%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .middle-skew {
+    transform: skewX(-10deg);
   }
   .title {
     padding-top: 50px;
@@ -182,14 +220,19 @@ html {
     margin-left: 40px;
     margin-right: 40px;
   }
-  .contact-bg {
+  .skew-bg {
     transform: skewX(-20deg);
     margin-left: 15%;
     margin-right: 15%;
   }
-  .contact {
-    margin-left: 30%;
-    margin-right: 30%;
+  .skew {
+    transform: skewX(20deg);
+    left: -20%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .middle-skew {
+    transform: skewX(-20deg);
   }
   .title {
     padding-top: 50px;
@@ -205,14 +248,19 @@ html {
     margin-left: 80px;
     margin-right: 80px;
   }
-  .contact-bg {
+  .skew-bg {
     transform: skewX(-30deg);
     margin-left: 20%;
     margin-right: 20%;
   }
-  .contact {
-    margin-left: 33%;
-    margin-right: 33%;
+  .skew {
+    transform: skewX(30deg);
+    left: -20%;
+    margin-left: 21%;
+    margin-right: 21%;
+  }
+  .middle-skew {
+    transform: skewX(-30deg);
   }
   .title {
     padding-top: 50px;
