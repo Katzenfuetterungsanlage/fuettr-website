@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef, NgZone } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { PageScrollConfig, PageScrollService, PageScrollInstance, PageScrollOptions } from 'ng2-page-scroll';
 import { DOCUMENT } from '@angular/common';
+import { PageScrollConfig, PageScrollService, PageScrollInstance, PageScrollOptions } from 'ng2-page-scroll';
 
 @Component({
   selector: 'app-root',
@@ -18,14 +18,8 @@ export class AppComponent implements OnInit {
   public bottomhidden = false;
   public mobile = false;
   private int = 1;
-  @ViewChild('container') private container: ElementRef;
 
-  constructor(
-    private pageScrollService: PageScrollService,
-    @Inject(DOCUMENT) private document: Document,
-    private titleService: Title,
-    ngZone: NgZone
-  ) {
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: Document, private titleService: Title, ngZone: NgZone) {
     if (window.innerWidth < 768) {
       this.mobile = true;
     }
@@ -41,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
-    // this.goTo('#home');
+    this.switcher();
     this.titleService.setTitle('Füttr - Homepage');
     PageScrollConfig.defaultScrollOffset = -10;
     PageScrollConfig.defaultDuration = 200;
