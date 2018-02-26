@@ -9,24 +9,30 @@
         <br>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" (click)="setInt(1)" [ngClass]="{'active': active1}">Home</a>
+                <a class="nav-link" (click)="setInt(1)" [ngClass]="{'active': active1}" i18n>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="setInt(2)" [ngClass]="{'active': active2}">Schritte</a>
+                <a class="nav-link" (click)="setInt(2)" [ngClass]="{'active': active2}" i18n>Schritte</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="setInt(3)" [ngClass]="{'active': active3}">Funktionsweise</a>
+                <a class="nav-link" (click)="setInt(3)" [ngClass]="{'active': active3}" i18n>Funktionsweise</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="setInt(4)" [ngClass]="{'active': active4}">Updates</a>
+                <a class="nav-link" (click)="setInt(4)" [ngClass]="{'active': active4}" i18n>Updates</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" (click)="setInt(5)" [ngClass]="{'active': active5}">Kontakt</a>
+                <a class="nav-link" (click)="setInt(5)" [ngClass]="{'active': active5}" i18n>Kontakt</a>
             </li>
         </ul>
         <div></div>
         <div></div>
-        <ul></ul>
+        <div>
+            <span *ngFor="let lang of languages">
+                <a *ngIf="lang.code !== localeId" href="/{{lang.code}}">
+                    <img src="{{lang.img}}">
+                </a>
+            </span>
+        </div>
     </div>
 </nav>
 <img src="assets/arrow-up.png" class="fixed-top arrow-top" (click)="up()" [hidden]="tophidden">

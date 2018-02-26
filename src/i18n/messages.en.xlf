@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" 
+  xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62cfd3da181dabc3da7a8337ec038815184e73bb" datatype="html">
+        <source>Schritte</source>
+        <target>Steps</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b445e1285efd42468b2863440a4e3ec91ccbcd27" datatype="html">
+        <source>Funktionsweise</source>
+        <target>How it works</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="721c5049f844116adbebd35d077c25b851549ba1" datatype="html">
+        <source>Updates</source>
+        <target>Updates</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/updates/updates.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5bff2d8a45ff23d437ff3beff685c5abcf08d18e" datatype="html">
+        <source>Kontakt</source>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3429fc92395f38a5334be81250393b9a44c7032c" datatype="html">
+        <source>Übersicht</source>
+        <target>Füttr</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="885c859675ac51488167d6372871c2a60cea2859" datatype="html">
+        <source>
+          <x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> Email:         
+        </source>
+        <target>
+          <x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> Email:         
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ef0daa7de74d5eae10c8e90abd6ff61e7ec87530" datatype="html">
+        <source>
+          <x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> Discord Support Server:         
+        </source>
+        <target>
+          <x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> Discord Support Server:         
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4f473b30ccbf11fd8ee2dcab79cd93edfbb39d92" datatype="html">
+        <source>
+          <x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> Github:         
+        </source>
+        <target>
+          <x id="TAG_IMG" ctype="image" equiv-text="&lt;img/&gt;"/> Github:         
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/contact/contact.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="85260153010f25c44dd6dfd50d02bae2b61042b1" datatype="html">
+        <source>@TODO</source>
+        <target>@TODO</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/how/how.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

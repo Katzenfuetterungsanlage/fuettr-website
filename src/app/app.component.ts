@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef, NgZone } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef, NgZone, LOCALE_ID } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 import { PageScrollConfig, PageScrollService, PageScrollInstance, PageScrollOptions } from 'ng2-page-scroll';
@@ -17,9 +17,10 @@ export class AppComponent implements OnInit {
   public tophidden = true;
   public bottomhidden = false;
   public mobile = false;
+  public languages = [{ code: 'en', img: 'assets/en.png' }, { code: 'de', img: 'assets/de.png' }];
   private int = 1;
 
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: Document, private titleService: Title, ngZone: NgZone) {
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: Document, private titleService: Title, ngZone: NgZone, @Inject(LOCALE_ID) protected localeId: string) {
     if (window.innerWidth < 768) {
       this.mobile = true;
     }
