@@ -45,8 +45,8 @@
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3429fc92395f38a5334be81250393b9a44c7032c" datatype="html">
-        <source>Übersicht</source>
+      <trans-unit id="d0007c768bea95835b9e9a9677d7fbc20146bacb" datatype="html">
+        <source>Füttr</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/home/home.component.ts</context>
           <context context-type="linenumber">2</context>

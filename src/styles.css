@@ -19,6 +19,20 @@
   position: static;
 }
 
+.small-skew-bg {
+  margin-top: 50px;
+  height: 50%;
+  width: 50%;
+  background-color: #191816;
+  z-index: -2;
+}
+
+.small-skew {
+  height: 50%;
+  z-index: 8;
+  position: static;
+}
+
 .contact {
   padding-top: 1%;
 }
@@ -31,10 +45,16 @@
 .middle-skew {
   height: 100%;
   width: 50%;
-  top: -200%;
+  top: -100%;
   left: 25%;
   z-index: 8;
   background-color: #54596f;
+  position: relative;
+}
+
+.middle {
+  top: 25%;
+  left: 3%;
   position: relative;
 }
 
@@ -43,9 +63,15 @@
   height: 100%;
   width: 50%;
   left: 50%;
-  top: -100%;
+  top: -200%;
   z-index: -2;
   background-color: #22242c;
+  position: relative;
+}
+
+.right-text {
+  top: 50%;
+  left: 50%;
   position: relative;
 }
 
@@ -56,6 +82,18 @@
   height: 100%;
   z-index: -2;
   position: relative;
+}
+
+.left-text {
+  top: 2%;
+  left: 3%;
+  position: relative;
+}
+
+.page-title {
+  font-family: 'Concert One', cursive;
+  font-size: 56pt;
+  text-align: center;
 }
 
 .active {
@@ -167,8 +205,21 @@ html {
     margin-left: 5%;
     margin-right: 5%;
   }
+  .small-skew-bg {
+    transform: skewX(-2deg);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .small-skew {
+    transform: skewX(2deg);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   .middle-skew {
     transform: skewX(-2deg);
+  }
+  .middle {
+    transform: skewX(2deg);
   }
   .arrow-top,
   .arrow-bottom {
@@ -206,8 +257,22 @@ html {
     margin-left: 10%;
     margin-right: 10%;
   }
+  .small-skew-bg {
+    transform: skewX(-10deg);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .small-skew {
+    transform: skewX(10deg);
+    left: -20%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   .middle-skew {
     transform: skewX(-10deg);
+  }
+  .middle {
+    transform: skewX(10deg);
   }
   .title {
     padding-top: 50px;
@@ -234,8 +299,22 @@ html {
     margin-left: 15%;
     margin-right: 15%;
   }
+  .small-skew-bg {
+    transform: skewX(-20deg);
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .small-skew {
+    transform: skewX(20deg);
+    left: -20%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
   .middle-skew {
     transform: skewX(-20deg);
+  }
+  .middle {
+    transform: skewX(20deg);
   }
   .title {
     padding-top: 50px;
@@ -262,8 +341,22 @@ html {
     margin-left: 21%;
     margin-right: 21%;
   }
+  .small-skew-bg {
+    transform: skewX(-30deg);
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .small-skew {
+    transform: skewX(30deg);
+    left: -20%;
+    margin-left: 21%;
+    margin-right: 21%;
+  }
   .middle-skew {
     transform: skewX(-30deg);
+  }
+  .middle {
+    transform: skewX(30deg);
   }
   .title {
     padding-top: 50px;
