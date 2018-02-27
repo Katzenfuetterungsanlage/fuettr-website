@@ -26,12 +26,16 @@
         </ul>
         <div></div>
         <div></div>
-        <div>
-            <span *ngFor="let lang of languages">
-                <a *ngIf="lang.code !== localeId" href="/{{lang.code}}">
+        <div ngbDropdown>
+            <a ngbDropdownToggle>
+                <img src="assets/{{activelang}}.png">
+            </a>
+            <div ngbDropdownMenu>
+                <a *ngFor="let lang of languages" href="/{{lang.code}}" class="langlink">{{lang.code}}
                     <img src="{{lang.img}}">
+                    <br>
                 </a>
-            </span>
+            </div>
         </div>
     </div>
 </nav>

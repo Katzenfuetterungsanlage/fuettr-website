@@ -29,7 +29,7 @@
       </trans-unit>
       <trans-unit id="721c5049f844116adbebd35d077c25b851549ba1" datatype="html">
         <source>Updates</source>
-        <target>Updates</target>
+        <target>Neuigkeiten</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">21</context>

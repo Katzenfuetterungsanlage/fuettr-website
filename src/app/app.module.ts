@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { AppComponent } from './app.component';
@@ -16,8 +16,8 @@ import { UpdatesComponent } from './updates/updates.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, WhatComponent, ContactComponent, HowComponent, UpdatesComponent],
-  imports: [BrowserModule, HttpClientModule, HttpModule, FormsModule, BrowserAnimationsModule, Ng2PageScrollModule],
-  providers: [],
+  imports: [BrowserModule, HttpClientModule, HttpModule, FormsModule, BrowserAnimationsModule, Ng2PageScrollModule, NgbModule.forRoot()],
+  providers: [NgbDropdown],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ViewChild, Inject, ElementRef, NgZone,
 import { Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 import { PageScrollConfig, PageScrollService, PageScrollInstance, PageScrollOptions } from 'ng2-page-scroll';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
   public bottomhidden = false;
   public mobile = false;
   public languages = [{ code: 'en', img: 'assets/en.png' }, { code: 'de', img: 'assets/de.png' }];
+  public activelang;
   private int = 1;
 
   constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: Document, private titleService: Title, ngZone: NgZone, @Inject(LOCALE_ID) protected localeId: string) {
@@ -36,7 +38,12 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
-    this.switcher();
+    if (this.localeId === 'de') {
+      this.activelang = 'de';
+    } else {
+      this.activelang = 'en';
+    }
+    this.witcher();
     this.titleService.setTitle('Füttr - Homepage');
     PageScrollConfig.defaultScrollOffset = -10;
     PageScrollConfig.defaultDuration = 200;
@@ -54,7 +61,7 @@ export class AppComponent implements OnInit {
   public setInt(page: number) {
     this.int = page;
     this.navShow = false;
-    this.switcher();
+    this.witcher();
   }
 
   @HostListener('mousewheel', ['$event'])
@@ -72,7 +79,7 @@ export class AppComponent implements OnInit {
         }
         this.int++;
       }
-      this.switcher();
+      this.witcher();
     }
   }
 
@@ -91,21 +98,61 @@ export class AppComponent implements OnInit {
         }
         this.int++;
       }
-      this.switcher();
+      this.witcher();
     }
   }
 
   public up() {
     this.int--;
-    this.switcher();
+    this.witcher();
   }
 
   public down() {
     this.int++;
-    this.switcher();
+    this.witcher();
   }
 
-  private switcher() {
+  private titleWitcher() {
+    if (this.localeId === 'de') {
+      switch (this.int) {
+        case 1:
+          this.titleService.setTitle('Füttr - Home');
+          break;
+        case 2:
+          this.titleService.setTitle('Füttr - Steps');
+          break;
+        case 3:
+          this.titleService.setTitle('Füttr - How it works');
+          break;
+        case 4:
+          this.titleService.setTitle('Füttr - Updates');
+          break;
+        case 5:
+          this.titleService.setTitle('Füttr - Contact');
+          break;
+      }
+    } else {
+      switch (this.int) {
+        case 1:
+          this.titleService.setTitle('Füttr - Home');
+          break;
+        case 2:
+          this.titleService.setTitle('Füttr - Steps');
+          break;
+        case 3:
+          this.titleService.setTitle('Füttr - How it works');
+          break;
+        case 4:
+          this.titleService.setTitle('Füttr - Updates');
+          break;
+        case 5:
+          this.titleService.setTitle('Füttr - Contact');
+          break;
+      }
+    }
+  }
+
+  private witcher() {
     this.active1 = false;
     this.active2 = false;
     this.active3 = false;
@@ -118,30 +165,26 @@ export class AppComponent implements OnInit {
         this.active1 = true;
         this.tophidden = true;
         this.goTo('#home');
-        this.titleService.setTitle('Füttr - Homepage');
         break;
       case 2:
         this.active2 = true;
         this.goTo('#what');
-        this.titleService.setTitle('Füttr - Schritte');
         break;
       case 3:
         this.active3 = true;
         this.goTo('#how');
-        this.titleService.setTitle('Füttr - Funktionsweise');
         break;
       case 4:
         this.active4 = true;
         this.goTo('#updates');
-        this.titleService.setTitle('Füttr - Updates');
         break;
       case 5:
         this.active5 = true;
         this.bottomhidden = true;
         this.goTo('#contact');
-        this.titleService.setTitle('Füttr - Kontakt');
         break;
     }
+    this.titleWitcher();
   }
 
   public goTo(anchor: string): void {
