@@ -6,7 +6,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html' //dsgknsdlgknsdpgn
 })
 export class AppComponent implements OnInit {
   public navShow = false;
@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
   public languages = [{ code: 'en', img: 'assets/en.png' }, { code: 'de', img: 'assets/de.png' }];
   public activelang;
   private int = 1;
+  private allowed = false;
 
   constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: Document, private titleService: Title, ngZone: NgZone, @Inject(LOCALE_ID) protected localeId: string) {
     if (window.innerWidth < 768) {
@@ -38,6 +39,7 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit() {
+    this.allowed = true;
     if (this.localeId === 'de') {
       this.activelang = 'de';
     } else {
@@ -66,20 +68,25 @@ export class AppComponent implements OnInit {
 
   @HostListener('mousewheel', ['$event'])
   scroll(event: WheelEvent) {
-    if (!this.mobile) {
-      if (event.deltaY < -90) {
-        if (this.int === 1) {
-          return;
+    if (this.allowed) {
+      this.allowed = false;
+      if (!this.mobile) {
+        if (event.deltaY < -90) {
+          if (this.int === 1) {
+            this.allowed = true;
+            return;
+          }
+          this.int--;
         }
-        this.int--;
-      }
-      if (event.deltaY > 90) {
-        if (this.int === 5) {
-          return;
+        if (event.deltaY > 90) {
+          if (this.int === 5) {
+            this.allowed = true;
+            return;
+          }
+          this.int++;
         }
-        this.int++;
+        this.witcher();
       }
-      this.witcher();
     }
   }
 
@@ -153,6 +160,7 @@ export class AppComponent implements OnInit {
   }
 
   private witcher() {
+    this.allowed = false;
     this.active1 = false;
     this.active2 = false;
     this.active3 = false;
@@ -191,5 +199,8 @@ export class AppComponent implements OnInit {
     const pageScrollOptions: PageScrollOptions = { document: this.document, scrollTarget: anchor, pageScrollInterruptible: false };
     const pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance(pageScrollOptions);
     this.pageScrollService.start(pageScrollInstance);
+    setTimeout(() => {
+      this.allowed = true;
+    }, 300);
   }
 }

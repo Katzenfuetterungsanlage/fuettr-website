@@ -31,10 +31,11 @@
                 <img src="assets/{{activelang}}.png">
             </a>
             <div ngbDropdownMenu>
-                <a *ngFor="let lang of languages" href="/{{lang.code}}" class="langlink">{{lang.code}}
+                <span *ngFor="let lang of languages">
+                    <a href="/{{lang.code}}" class="langlink">{{lang.code}}</a>
                     <img src="{{lang.img}}">
                     <br>
-                </a>
+                </span>
             </div>
         </div>
     </div>
